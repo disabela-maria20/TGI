@@ -1,0 +1,70 @@
+*{
+    transition: all .4s;
+}
+
+/*slide*/
+.carousel-item{
+    height: 400px;
+}
+
+/*  Grid Produto */
+.grid-produto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px 10px;
+}
+.produto-item{
+    margin: 0 auto;
+}
+.produto-item a{
+    color: #000 !important;
+}
+.produto-item a:hover{
+    text-decoration: none !important;
+}
+@media(max-width: 990px){
+    .grid-produto{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Rodape */
+.rodape{
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    right: 0;
+    display: block;
+    left: 0;
+}
+/* Focus */
+:focus{
+    box-shadow: none !important;
+}
+
+/* Form */
+.form-login{
+    max-width: 260px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px #d8d8d8;
+}
+.form-cadastro{
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #d8d8d8;
+    overflow: hidden;
+}
+.form-slide{
+    display: flex;
+    width: 200%; 
+    overflow: hidden;
+}
+.form-slide .etapa {
+    width: 50%;
+    transition: all .4s;
+}
+.form-page{
+    overflow: hidden;
+}
+
