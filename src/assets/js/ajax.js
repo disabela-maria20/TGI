@@ -7,12 +7,12 @@ $(document).ready(function(){
         let cpf = $('#cpf').val()
         let tel = $('#tel').val()
 		let sexo = $('#sexo').val()
-		let email = $('#confirmSenha').val()
+		let email = $('#email').val()
         let senha = $('#senha').val()
-		let confSenha = $('#confSenha').val()
+		let confSenha = $('#confirmSenha').val()
 		$.ajax({
 			method: 'POST', 
-			url: 'valida.php', 
+			url: 'http://localhost/tgi/app/cadastro/cadastro.controller.php', 
 			data: { nome: nome, dataNasc: dataNasc, rg: rg, cpf: cpf, tel: tel, sexo: sexo, email: email, senha: senha, confSenha: confSenha},
 			dataType: 'json', 
 			success: function(data){
@@ -36,7 +36,7 @@ $(document).ready(function(){
 		let complemento = $('#complemento').val()
 		$.ajax({
 			method: 'POST', 
-			url: 'valida.php', 
+			url: 'http://localhost/tgi/app/cadastro/cadastro.controller.php', 
 			data: { cep: cep, endereco: endereco, numero: numero, bairro: bairro, uf: uf, cidade: cidade, complemento},
 			dataType: 'json', 
 			success: function(data){
@@ -47,4 +47,8 @@ $(document).ready(function(){
 		})
 	})
 })
-
+$(document).ready(function () { 
+	$("#rg").mask("99.999.999-9");
+	$("#cpf").mask("999.999.999-99");
+	$("#tel").mask("(99)99999-9999");
+});

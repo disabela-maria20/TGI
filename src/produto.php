@@ -86,7 +86,7 @@
                         </p>
                         <p>Preço de <span class="font-weight-bold">R$ 99,00</span> de <span class="font-weight-bold">R$
                                 69,00</span></p>
-                        <button class="btn btn-dark">Comprar</button>
+                        <a href="./pagamento.php" class="btn btn-dark">Comprar</a>
                     </div>
                 </div>
             </div>

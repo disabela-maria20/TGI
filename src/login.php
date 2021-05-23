@@ -21,7 +21,7 @@
                         <input type="password" class="form-control" id="senha" name="senha">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary btn-center">Entrar</button>
+                        <button type="submit" class="btn btn-dark btn-center">Entrar</button>
                     </div>
                 </form>
             </div>
