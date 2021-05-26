@@ -88,7 +88,7 @@
                      </div>
                      <div class="col-md-8">
                         <h2 class="p-3">Endereço</h2>
-                        <form class="form p-3" action="" method="post" id="formEndereco">
+                        <form class="form p-3" action="../app/cadastro/endereco.controller.php" method="post" id="formEndereco">
                            <div class="form-row">
                               <div class="form-group col-md-4">
                                  <label for="cep">CEP</label>
@@ -125,7 +125,7 @@
                            </div>
                            <div class="d-flex justify-content-end mt-5">
                               <button type="button" class="btn btn-outline-dark mr-1"  id="voltar">Voltar</button>
-                              <button type="submit" class="btn btn-dark">Proximo</button> 
+                              <button type="submit" class="btn btn-dark" onclick="window.location.href = 'index.php'">Cadastar</button> 
                            </div>
                         </form>
                      </div>

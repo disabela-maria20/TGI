@@ -1,6 +1,10 @@
 <?php
-    define('ROOT_PATH', dirname(__FILE__));
+    include '';
+    if($_SESSION['usuario'] != true){
+        $ativo = false;
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -17,7 +21,11 @@
             <div class=" bg-dark">
                 <div class="container">
                     <p class="text-white text-right">
-                        <a href="login.php" class="text-white">Entre</a> ou <a href="cadastro.php" class="text-white">Cadastre-se</a>
+                        <?php if($ativo == true){?>
+                            <a href="login.php" class="text-white">Entre</a> ou <a href="cadastro.php" class="text-white">Cadastre-se</a>
+                        <?php }else{ ?>
+                            <a href="login.php" class="text-white">Area do cliente</a>
+                        <?php } ?>
                     </p>
                 </div>
             </div>

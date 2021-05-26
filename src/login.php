@@ -10,10 +10,10 @@
         <section>
             <div class="container">
                 <h3 class="font-weight-bold pt-5 pb-5">Logo</h3>
-                <form class="form form-login">
+                <form class="form form-login" method="POST" action="../app/login/login.contoller.php">
                     <h3 class="text-center pt-3 pb-3">Entrar</h3>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">E-mail</label>
+                        <label for="email">E-mail</label>
                         <input type="email" class="form-control" id="email" name="email">
                     </div>
                     <div class="form-group">

@@ -3,17 +3,27 @@ $(document).ready(function(){
 		e.preventDefault()
 		let nome = $('#nome').val()
         let dataNasc = $('#dataNasc').val()
-        let rg = $('#rg').val()
-        let cpf = $('#cpf').val()
+        let rg = $('#cpf').val()
+        let cpf = $('#rg').val()
         let tel = $('#tel').val()
 		let sexo = $('#sexo').val()
 		let email = $('#email').val()
         let senha = $('#senha').val()
-		let confSenha = $('#confirmSenha').val()
+		let confirmSenha = $('#confirmSenha').val()
+		
 		$.ajax({
 			method: 'POST', 
 			url: 'http://localhost/tgi/app/cadastro/cadastro.controller.php', 
-			data: { nome: nome, dataNasc: dataNasc, rg: rg, cpf: cpf, tel: tel, sexo: sexo, email: email, senha: senha, confSenha: confSenha},
+			data: {
+				nome: nome, 
+				dataNasc: dataNasc, 
+				rg: rg, 
+				cpf: cpf, 
+				tel: tel,
+				sexo: sexo, 
+				email: email, 
+				senha: senha, 
+				confirmSenha: confirmSenha},
 			dataType: 'json', 
 			success: function(data){
 				alert( data);
@@ -36,8 +46,15 @@ $(document).ready(function(){
 		let complemento = $('#complemento').val()
 		$.ajax({
 			method: 'POST', 
-			url: 'http://localhost/tgi/app/cadastro/cadastro.controller.php', 
-			data: { cep: cep, endereco: endereco, numero: numero, bairro: bairro, uf: uf, cidade: cidade, complemento},
+			url: 'http://localhost/tgi/app/cadastro/endereco.controller.php', 
+			data: { 
+				cep: cep, 
+				endereco: endereco, 
+				numero: numero, 
+				bairro: bairro, 
+				uf: uf, 
+				cidade: cidade, 
+				complemento: complemento },
 			dataType: 'json', 
 			success: function(data){
 				alert( data);

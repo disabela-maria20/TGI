@@ -55,35 +55,68 @@
         </header>
         <section> 
             <div class="container">
-                <h2>Forma de Pagamento</h2>
+                <h2 class="mt-3 mb-3">Forma de Pagamento</h2>
                 <div class="row">
                     <div class="col-md-7">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-12">
-                                    <label for="N° cartao">N° cartao</label>
-                                    <input type="text" class="form-control" id="N° cartao" name="N° cartao">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="cartao-tab" data-toggle="pill" href="#cartao" role="tab" aria-controls="cartao" aria-selected="true">Cartão</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="boleto-tab" data-toggle="pill" href="#boleto" role="tab" aria-controls="boleto" aria-selected="false">Boleto</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="cartao" role="tabpanel" aria-labelledby="cartao-tab">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="N° cartao">N° cartao</label>
+                                        <input type="text" class="form-control" id="N° cartao" name="N° cartao">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="nome-cartao">Nome impresso no cartão</label>
+                                        <input type="text" class="form-control" id="nome-cartao" name="nome-cartao">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="data-validade"> Data validade</label>
+                                        <input type="text" class="form-control" id="data-validade" name="data-validade">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" class="form-control" id="cvv" name="cvv" >
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <label for="Nome impresso no cartão">Nome impresso no cartão</label>
-                                    <input type="text" class="form-control" id="Nome impresso no cartão" name="Nome impresso no cartão">
+                                <div class="form-group col-md-14">
+                                    <label for="Nome impresso no cartao">Nome impresso no cartao</label>
+                                    <input type="password" class="form-control" id="Nome impresso no cartao" name="Nome impresso no cartao">
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <label for="Data validade"> Data validade</label>
-                                    <input type="text" class="form-control" id="Data validade" name="Data validade">
+                                <div class="d-flex justify-content-end mt-5">
+                                    <button type="submit" class="btn btn-dark">Fazer Pedido</button>
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <label for="CVV">CVV</label>
-                                    <input type="text" class="form-control" id="CVV" name="CVV" >
-                                </div>
+                            </form> 
                             </div>
-                            <div class="form-group col-md-14">
-                                <label for="Nome impresso no cartao">Nome impresso no cartao</label>
-                                <input type="password" class="form-control" id="Nome impresso no cartao" name="Nome impresso no cartao">
+                            <div class="tab-pane fade" id="boleto" role="tabpanel" aria-labelledby="boleto-tab">
+                                <form action="" method="get">
+                                    <div class="forrm-gruop">
+                                        <label for="nome-boleto">Nome Completo</label>
+                                        <input class="form-control" type="text" name="nome-boleto">
+                                    </div>
+                                    <div class="form-gruop">
+                                        <label for="parcelas">Parcelas</label>
+                                        <select id="parcelas" class="custom-select" name="">
+                                            <option>1x R$100,00</option>
+                                            <option>2x R$50,00</option>
+                                            <option>3x R$33,33</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex justify-content-end mt-5">
+                                        <button type="submit" class="btn btn-dark">Fazer Pedido</button>
+                                    </div>
+                                </form>
                             </div>
-                            
-                            <button type="submit" class="btn btn-dark">Enviar</button>
-                        </form>  
+                        </div>
+                        
                     </div>
                     <div class="col-md-5">
                         <div class="card">
